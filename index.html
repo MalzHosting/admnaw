@@ -1,22 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#090b10"><title>MALZX — Website</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome To MayBank</title>
+<style>
+  * { margin:0; padding:0; }
+  html, body {
+    background:#000;
+    color:#00ff00;
+    font-family:"Courier New", Courier, monospace;
+    font-size:14px;
+    line-height:1.6;
+  }
+  body {
+    padding:40px 20px;
+    text-align:center;
+  }
+  a { color:#00ff00; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .wrapper {
+    max-width:760px;
+    margin:0 auto;
+    text-align:left;
+  }
+  pre.ascii {
+    color:#ff0000;
+    font-size:11px;
+    line-height:1.1;
+    text-align:center;
+    margin-bottom:20px;
+    white-space:pre;
+    overflow-x:auto;
+  }
+  .line {
+    border-top:1px dashed #00ff00;
+    margin:15px 0;
+    opacity:0.6;
+  }
+  h1.title {
+    text-align:center;
+    color:#ff0000;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin:15px 0;
+  }
+  h1.title span {
+    color:#00ff00;
+  }
+  .info {
+    text-align:center;
+    margin:15px 0;
+    color:#ffff00;
+    font-size:13px;
+  }
+  .greetz {
+    text-align:center;
+    font-size:12px;
+    color:#888;
+    margin-top:20px;
+  }
+  .greetz b { color:#00ff00; }
+  .greetz .crew { color:#ff0000; font-weight:bold; }
+  .footer-note {
+    text-align:center;
+    color:#555;
+    font-size:11px;
+    margin-top:25px;
+    border-top:1px solid #222;
+    padding-top:10px;
+  }
+  marquee {
+    color:#ff0000;
+    background:#111;
+    border-top:1px solid #00ff00;
+    border-bottom:1px solid #00ff00;
+    padding:6px 0;
+    margin:15px 0;
+    font-weight:bold;
+    font-size:13px;
+  }
+  .blink {
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity:0; } }
+  .flag {
+    color:#ff0000;
+    font-weight:bold;
+  }
+  .counter {
+    display:inline-block;
+    background:#111;
+    border:1px solid #00ff00;
+    padding:2px 8px;
+    color:#00ff00;
+    letter-spacing:4px;
+    font-weight:bold;
+  }
+</style>
 </head>
 <body>
-  <header class="top"><a class="brand" href="/">MALZX<span>.</span></a><a class="admin-link" href="/admin.html">Admin</a></header>
-  <main id="site-content" class="content">
-    <div class="eyebrow">PERSONAL WEBSPACE</div>
-    <h1>Build something<br><span>remarkable.</span></h1>
-    <p>Ini halaman utama website kamu. Masuk ke panel admin untuk mengganti konten HTML halaman ini.</p>
-    <a class="button" href="/admin.html">Buka Admin Panel</a>
-  </main>
-  <footer>© <span id="year"></span> MALZX. Built with care.</footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const saved = localStorage.getItem('malzx_home_html');
-    if (saved) document.getElementById('site-content').innerHTML = saved;
-  </script>
-</body></html>
+
+<div class="wrapper">
+
+<pre class="ascii">
+ _   _    _    ____ _  _______ ____
+| | | |  / \  / ___| |/ / ____|  _ \
+| |_| | / _ \| |   | ' /|  _| | | | |
+|  _  |/ ___ \ |___| . \| |___| |_| |
+|_| |_/_/   \_\____|_|\_\_____|____/
+</pre>
+
+<div class="line"></div>
+
+<h1 class="title">HACKED BY <span>MALZXPLOIT</span></h1>
+
+<marquee scrollamount="6" behavior="scroll">⚠ SYSTEM COMPROMISED ⚠ YOUR SECURITY IS A JOKE ⚠ NO SYSTEM IS SAFE ⚠ WE ARE CIAMIS CYBER TEAM ⚠</marquee>
+
+<div class="info">
+  <b>Status:</b> <span class="blink" style="color:#ff0000;">●</span> <span style="color:#00ff00;">OWNED</span>
+</div>
+
+<div class="line"></div>
+
+<div class="info">
+  <b>Why?</b> Because we can. Because your security is a lie.<br>
+  Patch your shit. Harden your config. Or we come back.
+</div>
+
+<div class="line"></div>
+
+<div class="greetz">
+  <b>Greetz:</b> <span class="crew">CIAMIS CYBER TEAM</span><br>
+  <b>Shoutout:</b> The ones who still know what real security means.
+</div>
+
+<div class="line"></div>
+
+<div class="info">
+  <span style="color:#888;">You are visitor number</span><br>
+  <span class="counter">01337</span>
+</div>
+
+<div class="footer-note">
+  <span class="flag">./Hacked By MALZXPLOIT</span> &nbsp;|&nbsp; CIAMIS CYBER TEAM &nbsp;|&nbsp; No system is safe
+</div>
+
+</div>
+
+</body>
+</html>
