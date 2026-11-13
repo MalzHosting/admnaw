@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b10"><title>MALZX — Website</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top"><a class="brand" href="/">MALZX<span>.</span></a><a class="admin-link" href="/admin.html">Admin</a></header>
+  <main id="site-content" class="content">
+    <div class="eyebrow">PERSONAL WEBSPACE</div>
+    <h1>Build something<br><span>remarkable.</span></h1>
+    <p>Ini halaman utama website kamu. Masuk ke panel admin untuk mengganti konten HTML halaman ini.</p>
+    <a class="button" href="/admin.html">Buka Admin Panel</a>
+  </main>
+  <footer>© <span id="year"></span> MALZX. Built with care.</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const saved = localStorage.getItem('malzx_home_html');
+    if (saved) document.getElementById('site-content').innerHTML = saved;
+  </script>
+</body></html>

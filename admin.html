@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b10"><title>Admin — MALZX</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-body">
+  <header class="top"><a class="brand" href="/">MALZX<span>.</span></a><a class="admin-link" href="/">Lihat Website</a></header>
+  <main class="admin-wrap">
+    <section id="login-card" class="panel login-card">
+      <div class="eyebrow">CONTROL CENTER</div><h1>Admin <span>Login</span></h1>
+      <p class="muted">Masuk untuk mengelola konten halaman utama.</p>
+      <form id="login-form">
+        <label>Username<input id="username" autocomplete="username" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="button full" type="submit">Masuk</button>
+        <p id="login-error" class="error" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="editor-card" class="panel editor-card" hidden>
+      <div class="editor-head"><div><div class="eyebrow">WEBSITE SETTINGS</div><h1>HTML <span>Editor</span></h1></div><button id="logout" class="button ghost">Logout</button></div>
+      <p class="muted">Edit bagian konten halaman utama. Perubahan disimpan di browser ini menggunakan localStorage.</p>
+      <label for="html-editor">HTML halaman utama</label>
+      <textarea id="html-editor" spellcheck="false"></textarea>
+      <div class="actions"><button id="preview" class="button ghost">Preview</button><button id="save" class="button">Simpan Perubahan</button><button id="reset" class="button danger">Reset Default</button></div>
+      <div id="status" class="status" aria-live="polite"></div>
+      <div class="preview-box"><div class="preview-title">PREVIEW</div><iframe id="preview-frame" title="Preview halaman utama" sandbox=""></iframe></div>
+    </section>
+    <p class="security-note">Penting: login ini hanya pengunci antarmuka sisi browser, bukan autentikasi server. Jangan gunakan untuk mengelola informasi rahasia atau situs produksi yang membutuhkan keamanan admin sungguhan.</p>
+  </main>
+  <script src="/admin.js"></script>
+</body></html>
