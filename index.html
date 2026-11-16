@@ -5,98 +5,129 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome To MayBank</title>
 <style>
-  * { margin:0; padding:0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
   html, body {
     background:#000;
-    color:#00ff00;
+    color:#fff;
     font-family:"Courier New", Courier, monospace;
-    font-size:14px;
-    line-height:1.6;
+    height:100vh;
+    overflow:hidden;
+    font-size:13px;
+    line-height:1.5;
   }
   body {
-    padding:40px 20px;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
-  a { color:#00ff00; text-decoration:none; }
+  a { color:#fff; text-decoration:none; }
   a:hover { text-decoration:underline; }
   .wrapper {
-    max-width:760px;
-    margin:0 auto;
+    width:100%;
+    max-width:720px;
+    max-height:100vh;
+    padding:14px 18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     text-align:left;
   }
   pre.ascii {
-    color:#ff0000;
-    font-size:11px;
-    line-height:1.1;
+    color:#fff;
+    font-size:10px;
+    line-height:1.05;
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:8px;
     white-space:pre;
-    overflow-x:auto;
+    overflow:hidden;
   }
   .line {
-    border-top:1px dashed #00ff00;
-    margin:15px 0;
-    opacity:0.6;
+    border-top:1px dashed #666;
+    margin:8px 0;
   }
   h1.title {
     text-align:center;
-    color:#ff0000;
-    font-size:22px;
+    color:#fff;
+    font-size:18px;
     font-weight:bold;
-    letter-spacing:2px;
-    margin:15px 0;
+    letter-spacing:3px;
+    margin:6px 0;
   }
   h1.title span {
-    color:#00ff00;
-  }
-  .info {
-    text-align:center;
-    margin:15px 0;
-    color:#ffff00;
-    font-size:13px;
-  }
-  .greetz {
-    text-align:center;
-    font-size:12px;
-    color:#888;
-    margin-top:20px;
-  }
-  .greetz b { color:#00ff00; }
-  .greetz .crew { color:#ff0000; font-weight:bold; }
-  .footer-note {
-    text-align:center;
-    color:#555;
-    font-size:11px;
-    margin-top:25px;
-    border-top:1px solid #222;
-    padding-top:10px;
+    color:#fff;
+    background:#fff;
+    color:#000;
+    padding:0 4px;
   }
   marquee {
-    color:#ff0000;
+    color:#fff;
     background:#111;
-    border-top:1px solid #00ff00;
-    border-bottom:1px solid #00ff00;
-    padding:6px 0;
-    margin:15px 0;
+    border-top:1px solid #444;
+    border-bottom:1px solid #444;
+    padding:3px 0;
+    margin:8px 0;
     font-weight:bold;
-    font-size:13px;
+    font-size:11px;
   }
+  .status {
+    text-align:center;
+    font-size:11px;
+    color:#aaa;
+    margin:4px 0;
+  }
+  .status b { color:#fff; }
   .blink {
     animation: blink 1s steps(1) infinite;
   }
   @keyframes blink { 50% { opacity:0; } }
+  .sad-quote {
+    text-align:center;
+    margin:10px auto;
+    color:#ddd;
+    font-size:12px;
+    font-style:italic;
+    line-height:1.7;
+    max-width:640px;
+    padding:0 8px;
+  }
+  .sad-quote .frag {
+    color:#fff;
+    font-style:normal;
+    font-weight:bold;
+  }
+  .sad-quote .dim {
+    color:#666;
+    font-style:normal;
+  }
+  .greetz {
+    text-align:center;
+    font-size:11px;
+    color:#888;
+    margin-top:6px;
+  }
+  .greetz b { color:#fff; }
+  .greetz .crew { color:#fff; font-weight:bold; }
+  .footer-note {
+    text-align:center;
+    color:#666;
+    font-size:10px;
+    margin-top:8px;
+    border-top:1px solid #222;
+    padding-top:6px;
+  }
   .flag {
-    color:#ff0000;
+    color:#fff;
     font-weight:bold;
   }
   .counter {
     display:inline-block;
     background:#111;
-    border:1px solid #00ff00;
-    padding:2px 8px;
-    color:#00ff00;
-    letter-spacing:4px;
+    border:1px solid #444;
+    padding:1px 6px;
+    color:#fff;
+    letter-spacing:3px;
     font-weight:bold;
+    font-size:10px;
   }
 </style>
 </head>
@@ -116,35 +147,30 @@
 
 <h1 class="title">HACKED BY <span>MALZXPLOIT</span></h1>
 
-<marquee scrollamount="6" behavior="scroll">⚠ SYSTEM COMPROMISED ⚠ YOUR SECURITY IS A JOKE ⚠ NO SYSTEM IS SAFE ⚠ WE ARE CIAMIS CYBER TEAM ⚠</marquee>
+<marquee scrollamount="5" behavior="scroll">⚠ SYSTEM COMPROMISED ⚠ NO SYSTEM IS SAFE ⚠ WE ARE CIAMIS CYBER TEAM ⚠</marquee>
 
-<div class="info">
-  <b>Status:</b> <span class="blink" style="color:#ff0000;">●</span> <span style="color:#00ff00;">OWNED</span>
+<div class="status">
+  <b>Status:</b> <span class="blink">●</span> OWNED
 </div>
 
 <div class="line"></div>
 
-<div class="info">
-  <b>Why?</b> Because we can. Because your security is a lie.<br>
-  Patch your shit. Harden your config. Or we come back.
+<div class="sad-quote">
+  Aku bisa decrypt semua file, tapi aku nggak bisa decrypt alasan kamu pergi.<br>
+  Aku bisa akses root di semua server, tapi aku nggak punya akses ke kamu lagi.<br>
+  <span class="frag">Kamu adalah exploit yang paling sempurna,</span><br>
+  <span class="dim">dan aku adalah korban yang nggak pernah pulih. // 0 bytes remaining</span>
 </div>
 
 <div class="line"></div>
 
 <div class="greetz">
-  <b>Greetz:</b> <span class="crew">CIAMIS CYBER TEAM</span><br>
-  <b>Shoutout:</b> The ones who still know what real security means.
-</div>
-
-<div class="line"></div>
-
-<div class="info">
-  <span style="color:#888;">You are visitor number</span><br>
-  <span class="counter">01337</span>
+  <b>Greetz:</b> <span class="crew">CIAMIS CYBER TEAM</span>
 </div>
 
 <div class="footer-note">
-  <span class="flag">./Hacked By MALZXPLOIT</span> &nbsp;|&nbsp; CIAMIS CYBER TEAM &nbsp;|&nbsp; No system is safe
+  <span class="flag">./Hacked By MALZXPLOIT</span> &nbsp;|&nbsp; CIAMIS CYBER TEAM &nbsp;|&nbsp; No system is safe<br>
+  <span style="color:#555;">visitor:</span> <span class="counter">01337</span>
 </div>
 
 </div>
